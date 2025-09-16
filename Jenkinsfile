@@ -1,23 +1,14 @@
-pipeline 
+pipeline
 {
     agent any
-
-    stages 
+    stages
     {
-        stage('Hello') 
+        stage('test')
         {
-            steps 
+            steps
             {
-                echo 'Hello World'
-            }
-        }
-        stage('Hello2') 
-        {
-            steps 
-            {
-                echo 'Hello World2'
+                echo 'hellow tester'
             }
         }
     }
 }
-
