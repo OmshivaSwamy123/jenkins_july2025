@@ -24,5 +24,12 @@ pipeline
                 echo 'Moving to tp Production'
             }
         }
+        stage('Production 2')
+        {
+            steps
+            {
+                echo 'Moving to tp Production 2'
+            }
+        }
     }
 }
