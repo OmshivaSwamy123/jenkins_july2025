@@ -21,14 +21,14 @@ pipeline
         {
             steps
             {
-                echo 'Moving to tp Production'
+                echo 'Moving to Production'
             }
         }
         stage('Production 2')
         {
             steps
             {
-                echo 'Moving to tp Production 2'
+                echo 'Moving to staging due to issue '
             }
         }
     }
