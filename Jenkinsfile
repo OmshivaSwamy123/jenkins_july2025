@@ -7,7 +7,21 @@ pipeline
         {
             steps
             {
-                echo 'hellow tester'
+                echo 'Testing Apllication'
+            }
+        }
+        stage('Develop')
+        {
+            steps
+            {
+                echo 'Developing application'
+            }
+        }
+        stage('Production')
+        {
+            steps
+            {
+                echo 'Moving to tp Production'
             }
         }
     }
