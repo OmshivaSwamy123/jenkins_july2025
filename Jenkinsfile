@@ -29,6 +29,10 @@ pipeline
             steps
             {
                 echo 'Moving to staging due to issue '
+                sh '''
+                sleep 10
+                exit 1
+                '''
             }
         }
     }
