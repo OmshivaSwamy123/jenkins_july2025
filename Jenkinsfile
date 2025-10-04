@@ -15,6 +15,10 @@ pipeline
             steps
             {
                 echo 'Developing application'
+                sh '''
+                sleep 10
+                exit 1
+                '''
             }
         }
         stage('Production')
@@ -29,10 +33,7 @@ pipeline
             steps
             {
                 echo 'Moving to staging due to issue '
-                sh '''
-                sleep 10
-                exit 1
-                '''
+                
             }
         }
     }
