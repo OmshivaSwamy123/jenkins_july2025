@@ -1,0 +1,257 @@
+
+🔹 Git & GitHub Top 50 Questions and Answers
+
+🔸 Basics of Git and GitHub
+	1. What is Git?
+		○ Git is a distributed version control system used to track changes in source code during software development.
+	2. What is GitHub?
+		○ GitHub is a cloud-based platform that hosts Git repositories and offers collaborative features like pull requests, issue tracking, etc.
+	3. What is the difference between Git and GitHub?
+		○ Git is the version control tool; GitHub is a hosting service for Git repositories.
+	4. What is a repository in Git?
+		○ A repository (or repo) is a storage location for your project files and the entire history of changes.
+	5. What is the difference between a local and a remote repository?
+		○ Local repo exists on your computer; remote repo is hosted on platforms like GitHub, GitLab, etc.
+
+🔸 Git Workflow & Commands
+	6. How do you initialize a Git repository?
+    git init
+	7. How do you clone a repository?
+    git clone <repo-url>
+	8. How do you check the status of your working directory?
+    git status
+	9. How do you add files to staging?
+    git add <filename>  # or use . to add all
+	10. How do you commit changes?
+	git commit -m "Your message"
+	11. How do you see commit history?
+	git log
+	12. How do you push changes to a remote repository?
+	git push origin <branch-name>
+	13. How do you pull updates from a remote repository?
+	git pull origin <branch-name>
+	14. How do you create a new branch?
+	git checkout -b <new-branch-name>
+	15. How do you switch branches?
+	git checkout <branch-name>
+	16. How do you merge branches?
+	git checkout main
+    git merge <branch-name>
+	17. How do you delete a branch?
+	git branch -d <branch-name>
+	18. How do you rename a branch?
+	git branch -m <new-name>
+
+🔸 Advanced Git Concepts
+	19. What is a detached HEAD?
+	• When HEAD points to a specific commit instead of a branch, you are in a "detached HEAD" state.
+	20. How do you resolve merge conflicts?
+	• Manually edit the conflicting files, then:
+    git add <conflicted-file>
+    git commit
+	21. What is rebase in Git?
+	• Rebase moves or combines a sequence of commits to a new base commit.
+	22. How is rebase different from merge?
+	• Rebase creates a linear history; merge preserves history but adds a merge commit.
+	23. How do you undo the last commit (keep changes)?
+	git reset --soft HEAD~1
+	24. How do you discard all local changes?
+	git reset --hard
+	25. How do you stash changes?
+	git stash
+	26. How do you apply stashed changes?
+	git stash apply
+	27. How do you list stashes?
+	git stash list
+	28. What is .gitignore?
+	• A file that tells Git which files/folders to ignore (e.g., node_modules, *.log).
+	29. What is a remote?
+	• A remote is a version of your project that is hosted on the internet or network.
+	30. How do you add a remote repository?
+	git remote add origin <url>
+
+🔸 GitHub Specific Questions
+	31. What is a pull request (PR)?
+	• A way to propose changes in a project by pushing a branch and requesting it be merged into the main branch.
+	32. What is forking in GitHub?
+	• Creating a personal copy of someone else's repository.
+	33. What are GitHub Actions?
+	• CI/CD pipelines that run workflows based on GitHub events like push, pull request, etc.
+	34. What is the difference between GitHub and GitLab?
+	• Both host Git repositories, but GitLab has built-in CI/CD, issue tracking, and DevOps tools integrated.
+	35. What is a GitHub gist?
+	• A simple way to share code snippets or notes.
+	36. What is GitHub Pages?
+	• A feature that lets you host static websites directly from a GitHub repo.
+
+🔸 Collaboration and Best Practices
+	37. How do you contribute to an open-source project on GitHub?
+	• Fork → Clone → Branch → Commit → Push → Create Pull Request.
+	38. How do you handle code review in GitHub?
+	• Use pull requests, request reviewers, comment on lines of code, and approve/request changes.
+	39. What is a good commit message format?
+	• Clear, concise, in imperative mood. Example:
+    feat: add login feature
+    fix: correct typo in README
+	40. What is git cherry-pick?
+	• Applies a single commit from one branch to another.
+    git cherry-pick <commit-hash>
+	41. What is git revert?
+	• Creates a new commit that undoes a previous commit.
+	42. What is the use of git tag?
+	• Marks specific commits as release points.
+    git tag v1.0
+	43. How do you push tags to remote?
+	git push origin --tags
+	44. How do you remove a file from Git without deleting it from the file system?
+	git rm --cached <file>
+	45. What is the difference between origin and upstream?
+	• origin is your forked repo; upstream is the original repo you forked from.
+	46. How do you sync your fork with the upstream repository?
+	git remote add upstream <url>
+    git fetch upstream
+    git merge upstream/main
+
+🔸 Git Internals & Troubleshooting
+	47. What is the .git folder?
+	• It's the directory that contains all metadata and object database for the repo.
+	48. What is the staging area in Git?
+	• A place where changes are kept before being committed.
+	49. What does git diff do?
+	• Shows the differences between commits, branches, or working directories.
+	50. How do you recover a deleted branch?
+	git reflog
+    git checkout -b <branch-name> <commit-hash>
+
+🔸 Intermediate to Advanced Git Usage
+	1. What does git fetch do?
+	• It downloads changes from the remote repository without merging them into your working branch.
+	2. Difference between git pull and git fetch?
+	• git pull = git fetch + git merge. It updates your local branch with remote changes directly.
+	3. How do you squash commits in Git?
+	• During rebase:
+        git rebase -i HEAD~n
+
+Replace pick with squash or s.
+	4. What is a fast-forward merge?
+	• A merge where no divergence has occurred. Git simply moves the pointer forward.
+	5. What is a three-way merge?
+	• A merge that involves two branches and their common ancestor (base), used when there are divergent changes.
+	6. How do you list all branches (local and remote)?
+	git branch -a
+	7. How do you see which branch you're on?
+	git branch
+	8. How do you find which files were changed in a commit?
+	git show --name-only <commit-id>
+	9. How do you revert a pushed commit (without deleting history)?
+	git revert <commit-id>
+	10. How do you remove the last commit completely (not recommended on shared branches)?
+	git reset --hard HEAD~1
+
+🔸 Git Config & Environment
+	1. How do you set your Git username and email?
+	git config --global user.name "Your Name"
+    git config --global user.email "you@example.com"
+	2. How do you view Git configuration settings?
+	git config --list
+	3. What is the difference between --global, --local, and --system configs?
+	• --system: Applies to every user.
+	• --global: Applies to your user.
+	• --local: Applies to the current repo only.
+	4. How do you change the default editor for Git?
+	git config --global core.editor "code --wait"
+	5. How do you create an alias in Git?
+	git config --global alias.st status
+
+🔸 Git Reflog and Recovery
+	1. What is git reflog?
+	• Shows a log of where HEAD and references have moved, useful for recovering lost commits.
+	2. How do you recover a commit after a reset?
+	git reflog
+    git checkout <commit-hash>
+	3. How do you find a deleted branch?
+	• Use git reflog to find the last commit of the branch.
+	4. What is the difference between HEAD, HEAD~1, and HEAD^?
+	• HEAD: current commit
+	• HEAD~1: parent of HEAD
+	• HEAD^: also parent of HEAD (same as ~1)
+
+🔸 Git Hooks & Automation
+	1. What are Git hooks?
+	• Scripts that run automatically on certain Git events (e.g., pre-commit, post-merge).
+	2. Where are Git hooks located?
+	• In the .git/hooks/ directory.
+	3. Can Git hooks be pushed to remote?
+	• No. They are local only unless managed via third-party tools.
+	4. What is a common use of a pre-commit hook?
+	• To run linters, formatters, or tests before allowing a commit.
+
+🔸 CI/CD & GitHub Integration
+	1. What is GitHub Actions used for?
+	• Automating workflows like testing, building, and deploying applications.
+	2. How do you define a GitHub Actions workflow?
+	• Inside .github/workflows/ as a .yml file.
+	3. How do you trigger a workflow on pull request?
+	on:
+        pull_request:
+	4. What is a GitHub secret?
+	• Encrypted environment variables used in GitHub Actions workflows.
+	5. What is a personal access token (PAT) in GitHub?
+	• An alternative to password-based authentication for GitHub's API and Git operations.
+
+🔸 Collaboration & Team Workflows
+	1. What is Git Flow?
+	• A branching model using feature, develop, release, and hotfix branches.
+	2. How do you handle a hotfix in Git?
+	• Create a hotfix branch from main, fix the issue, merge to both main and develop.
+	3. What is trunk-based development?
+	• A workflow where all developers commit to a single branch (often main) with short-lived feature branches.
+	4. What is a shallow clone?
+	• A clone with limited commit history:
+    git clone --depth 1 <repo>
+	5. How do you fork a repository on GitHub?
+	• Click “Fork” button on the repo’s page.
+	6. How do you sync a forked repository?
+	git remote add upstream <original-url>
+    git fetch upstream
+    git merge upstream/main
+
+🔸 Security, GPG, and Access
+	1. How do you sign a Git commit with GPG?
+	git commit -S -m "signed commit"
+	2. What is SSH key in GitHub?
+	• A secure way to authenticate your machine with GitHub using public/private key pairs.
+	3. How do you add an SSH key to GitHub?
+	• Generate with ssh-keygen, then add the public key to GitHub under Settings > SSH and GPG keys.
+	4. How do you check if Git is using SSH or HTTPS?
+	• Look at the remote URL:
+		○ SSH: git@github.com:user/repo.git
+		○ HTTPS: https://github.com/user/repo.git
+	5. What is a .gitattributes file?
+	• Defines custom attributes for pathnames, such as end-of-line settings or merge strategies.
+
+🔸 Troubleshooting & Real-Life Scenarios
+	1. How do you fix "You have divergent branches"?
+	• Decide whether to merge or rebase; resolve conflicts.
+	2. How do you fix “detached HEAD” state?
+	git checkout -b <new-branch-name>
+	3. How do you undo a git add before commit?
+	git reset <file>
+	4. How do you resolve fatal: refusing to merge unrelated histories?
+	git pull origin main --allow-unrelated-histories
+	5. What to do if Git shows permission denied (publickey)?
+	• Check SSH key setup and ensure it's added to your GitHub account.
+
+🔸 Advanced GitHub Features
+	1. What is CODEOWNERS file in GitHub?
+	• Specifies individuals responsible for files/directories; they are auto-requested for PR reviews.
+	2. What is GitHub Projects?
+	• A project management tool built into GitHub, like a Kanban board.
+	3. What is GitHub Discussions?
+	• A forum-like feature in repos to support community Q&A and ideas.
+	4. What is GitHub CLI?
+	• A command-line tool (gh) to manage GitHub repos, PRs, issues, etc.
+	5. How do you close an issue from a commit or PR?
+	• Include Fixes #<issue-number> in the commit or PR description.
+	6. Can you make private repositories on GitHub?
+	• Yes, GitHub supports both private and public repositories.
