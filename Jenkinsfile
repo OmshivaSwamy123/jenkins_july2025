@@ -36,5 +36,14 @@ pipeline
                 
             }
         }
+
+        stage('Production 2')
+        {
+            steps
+            {
+                echo 'Moving to staging due to issue '
+                
+            }
+        }
     }
 }
