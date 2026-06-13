@@ -319,14 +319,19 @@ Replace pick with squash or s.
 	• Defines custom attributes for pathnames, such as end-of-line settings or merge strategies.
 
 🔸 Troubleshooting & Real-Life Scenarios
+	
 	1. How do you fix "You have divergent branches"?
 	• Decide whether to merge or rebase; resolve conflicts.
+	
 	2. How do you fix “detached HEAD” state?
 	git checkout -b <new-branch-name>
+	
 	3. How do you undo a git add before commit?
 	git reset <file>
+	
 	4. How do you resolve fatal: refusing to merge unrelated histories?
 	git pull origin main --allow-unrelated-histories
+	
 	5. What to do if Git shows permission denied (publickey)?
 	• Check SSH key setup and ensure it's added to your GitHub account.
 
