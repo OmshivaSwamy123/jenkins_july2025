@@ -280,31 +280,41 @@ Replace pick with squash or s.
 🔸 Collaboration & Team Workflows
 	1. What is Git Flow?
 	• A branching model using feature, develop, release, and hotfix branches.
+	
 	2. How do you handle a hotfix in Git?
 	• Create a hotfix branch from main, fix the issue, merge to both main and develop.
+	
 	3. What is trunk-based development?
 	• A workflow where all developers commit to a single branch (often main) with short-lived feature branches.
+	
 	4. What is a shallow clone?
 	• A clone with limited commit history:
     git clone --depth 1 <repo>
+	
 	5. How do you fork a repository on GitHub?
 	• Click “Fork” button on the repo’s page.
+	
 	6. How do you sync a forked repository?
 	git remote add upstream <original-url>
     git fetch upstream
     git merge upstream/main
 
 🔸 Security, GPG, and Access
+	
 	1. How do you sign a Git commit with GPG?
 	git commit -S -m "signed commit"
+	
 	2. What is SSH key in GitHub?
 	• A secure way to authenticate your machine with GitHub using public/private key pairs.
+	
 	3. How do you add an SSH key to GitHub?
 	• Generate with ssh-keygen, then add the public key to GitHub under Settings > SSH and GPG keys.
+	
 	4. How do you check if Git is using SSH or HTTPS?
 	• Look at the remote URL:
 		○ SSH: git@github.com:user/repo.git
 		○ HTTPS: https://github.com/user/repo.git
+	
 	5. What is a .gitattributes file?
 	• Defines custom attributes for pathnames, such as end-of-line settings or merge strategies.
 
