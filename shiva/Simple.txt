@@ -336,15 +336,21 @@ Replace pick with squash or s.
 	• Check SSH key setup and ensure it's added to your GitHub account.
 
 🔸 Advanced GitHub Features
+	
 	1. What is CODEOWNERS file in GitHub?
 	• Specifies individuals responsible for files/directories; they are auto-requested for PR reviews.
+	
 	2. What is GitHub Projects?
 	• A project management tool built into GitHub, like a Kanban board.
+	
 	3. What is GitHub Discussions?
 	• A forum-like feature in repos to support community Q&A and ideas.
+	
 	4. What is GitHub CLI?
 	• A command-line tool (gh) to manage GitHub repos, PRs, issues, etc.
+	
 	5. How do you close an issue from a commit or PR?
 	• Include Fixes #<issue-number> in the commit or PR description.
+	
 	6. Can you make private repositories on GitHub?
 	• Yes, GitHub supports both private and public repositories.
