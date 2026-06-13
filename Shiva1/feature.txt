@@ -1,4 +1,4 @@
-If you want the **typical Git workflow in execution order**, use these commands:
+If you want the typical Git workflow in execution order, use these commands:
 
  1. Check current status
 
