@@ -3,15 +3,19 @@
 
 🔸 Basics of Git and GitHub
 	1. What is Git?
-		○ Git is a distributed version control system used to track changes in source code during software development.
+		○ Git is a distributed version control system used to track changes in source code during 
+			software development.
 	2. What is GitHub?
-		○ GitHub is a cloud-based platform that hosts Git repositories and offers collaborative features like pull requests, issue tracking, etc.
+		○ GitHub is a cloud-based platform that hosts Git repositories and offers collaborative 
+			features like pull requests, issue tracking, etc.
 	3. What is the difference between Git and GitHub?
 		○ Git is the version control tool; GitHub is a hosting service for Git repositories.
 	4. What is a repository in Git?
-		○ A repository (or repo) is a storage location for your project files and the entire history of changes.
+		○ A repository (or repo) is a storage location for your project files and the entire history 
+			of changes.
 	5. What is the difference between a local and a remote repository?
-		○ Local repo exists on your computer; remote repo is hosted on platforms like GitHub, GitLab, etc.
+		○ Local repo exists on your computer; remote repo is hosted on platforms like GitHub, 
+			GitLab, etc.
 
 🔸 Git Workflow & Commands
 	6. How do you initialize a Git repository?
