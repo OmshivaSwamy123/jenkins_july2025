@@ -88,3 +88,7 @@ git remote -v
 git diff
 git stash
 git stash pop
+
+
+BRANCH COMMANDS 
+
